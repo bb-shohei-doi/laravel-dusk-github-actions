@@ -33,6 +33,7 @@ jobs:
     - name: dusk test
       env:
         BROWSER: chrome
+        APP_URL: "http://127.0.0.1:8000"
       run: php artisan dusk
     - name: Execute tests (Unit and Feature tests) via PHPUnit
       run: vendor/bin/phpunit
