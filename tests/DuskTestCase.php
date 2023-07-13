@@ -44,7 +44,7 @@ abstract class DuskTestCase extends BaseTestCase
         })->all());
 
         return RemoteWebDriver::create(
-            'http://' . env('DOCKER_WEB_CONTAINER', 'localhost') . ':4444/wd/hub',
+            'http://' . env('DOCKER_WEB_CONTAINER', 'localhost:9515'),
             DesiredCapabilities::chrome()->setCapability(
                 ChromeOptions::CAPABILITY,
                 $options
