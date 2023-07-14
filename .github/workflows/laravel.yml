@@ -44,6 +44,6 @@ jobs:
         BROWSER: chrome
         APP_URL: http://127.0.0.1:8000/public
         DOCKER_WEB_CONTAINER: 127.0.0.1:9515
-      run: php artisan dusk --without-tty
+      run: php artisan dusk
     - name: Execute tests (Unit and Feature tests) via PHPUnit
       run: vendor/bin/phpunit
