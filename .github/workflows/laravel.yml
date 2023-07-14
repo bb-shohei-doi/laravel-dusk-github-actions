@@ -35,8 +35,8 @@ jobs:
       run: chmod -R 777 storage bootstrap/cache
     - name: install chrome driver
       run: php artisan dusk:chrome-driver --detect
-    - name: start chrome driver
-      run: ./vendor/laravel/dusk/bin/chromedriver-linux &
+#     - name: start chrome driver
+#       run: ./vendor/laravel/dusk/bin/chromedriver-linux &
     - name: Run Laravel Server
       run: php artisan serve --no-reload &
     - name: dusk test
