@@ -43,7 +43,7 @@ jobs:
       env:
         BROWSER: chrome
         APP_URL: http://127.0.0.1:8000
-#        DOCKER_WEB_CONTAINER: selenium:4444
+        DOCKER_WEB_CONTAINER: http://127.0.0.1:8000
       run: php artisan dusk --without-tty
     - name: Execute tests (Unit and Feature tests) via PHPUnit
       run: vendor/bin/phpunit
