@@ -14,7 +14,7 @@ abstract class DuskTestCase extends BaseTestCase
 
     protected function baseUrl()
     {
-        return env('APP_URL') . '/dusk-sample/public/';
+        return env('APP_URL');
     }
 
     /**
