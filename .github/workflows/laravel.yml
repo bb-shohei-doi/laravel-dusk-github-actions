@@ -42,7 +42,7 @@ jobs:
     - name: dusk test
       env:
         BROWSER: chrome
-        APP_URL: http://127.0.0.1:8000
+        APP_URL: http://127.0.0.1:8000/public
         DOCKER_WEB_CONTAINER: 127.0.0.1:9515
       run: php artisan dusk --without-tty
     - name: Execute tests (Unit and Feature tests) via PHPUnit
