@@ -10,6 +10,19 @@ jobs:
   laravel-tests:
     name: Test
     runs-on: ubuntu-latest
+    
+    services:
+      mysql:
+        image: mysql:8.0
+        ports:
+          - 3306:3306
+        env:
+          MYSQL_ROOT_PASSWORD: root
+          MYSQL_DATABASE: test_db
+          MYSQL_USER: root
+          MYSQL_PASSWORD: root
+          MYSQL_ALLOW_EMPTY_PASSWORD: 'yes'
+        options: --health-cmd "mysqladmin ping -h localhost" --health-interval 20s --health-timeout 10s --health-retries 10
 
     strategy:
       matrix:
@@ -47,7 +60,7 @@ jobs:
           APP_URL: http://127.0.0.1:8000
           DB_CONNECTION: mysql
           DB_HOST: 127.0.0.1
-          DB_PORT: 33306
+          DB_PORT: 3306
           DB_DATABASE: test_db
           DB_USERNAME: root
           DB_PASSWORD: root
