@@ -36,8 +36,8 @@ jobs:
           php artisan cache:clear
       - name: run dusk
         run: |
+          chmod -R 0755 ./vendor/laravel/dusk/bin/ &
           ./vendor/laravel/dusk/bin/chromedriver-linux &
-          chmod -R 0755 vendor/laravel/dusk/bin/ &
           php artisan serve &
           php artisan migrate &
           php artisan db:seed &
