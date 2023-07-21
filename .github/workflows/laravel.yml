@@ -29,7 +29,7 @@ jobs:
       - name: install libsqlite3
         run: sudo apt-get install -y libsqlite3-dev
       - name: install composer dependencies
-        run: composer install --no-script
+        run: composer install
       - name: clear config
         run: |
           php artisan config:clear
