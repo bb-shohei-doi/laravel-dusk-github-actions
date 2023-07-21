@@ -17,10 +17,10 @@ jobs:
         ports:
           - 3306:3306
         env:
-          MYSQL_ROOT_PASSWORD: root
+          MYSQL_ROOT_PASSWORD: ckroot
           MYSQL_DATABASE: test_db
-          MYSQL_USER: root
-          MYSQL_PASSWORD: root
+          MYSQL_USER: user
+          MYSQL_PASSWORD: pass
           MYSQL_ALLOW_EMPTY_PASSWORD: 'yes'
         options: --health-cmd "mysqladmin ping -h localhost" --health-interval 20s --health-timeout 10s --health-retries 10
 
@@ -62,5 +62,5 @@ jobs:
           DB_HOST: 127.0.0.1
           DB_PORT: 3306
           DB_DATABASE: test_db
-          DB_USERNAME: root
-          DB_PASSWORD: root
+          DB_USERNAME: user
+          DB_PASSWORD: pass
