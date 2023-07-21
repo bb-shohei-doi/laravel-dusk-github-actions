@@ -64,3 +64,4 @@ jobs:
           DB_DATABASE: test_db
           DB_USERNAME: user
           DB_PASSWORD: pass
+          DOCKER_WEB_CONTAINER: localhost:9515
